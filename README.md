@@ -38,9 +38,13 @@ All characters have the following attributes:
 4. A selection of skills
 5. An inventory 
 
-All characters that are race 'Space Marine' have the following Attributes:
+All characters that are race 'Space Marine' are gender == 'male' and have the following Attributes:
 1. Chapter
 all Characters have a class. Class is affected by race, and gender and may be affected by chapter if character is a space marine.
+
+All characters that are race 'Human' and class 'Rogue Trader' have the following Attributes:
+1. Title
+
 
 All characters have a bonus for each of their characteristics that is determined by take the generated stat, and % it by 10. 
 Example: Ballistic Skill of 39 would have a Ballistic Skill Bonus of 3
