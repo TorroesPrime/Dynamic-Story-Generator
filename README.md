@@ -43,6 +43,7 @@ All characters have the following attributes:
 
 All characters that are race 'Space Marine' are gender == 'male' and have the following Attributes:
 1. Chapter
+
 all Characters have a class. Class is affected by race, and gender and may be affected by chapter if character is a space marine.
 
 All characters that are race 'Human' and class 'Rogue Trader' have the following Attributes:
