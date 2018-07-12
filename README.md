@@ -81,8 +81,8 @@ All characters can perform the following actions:
 4b. if class = 'Rogue Trader' and gender = 'female', randomly select first name from femaleFirstNames list.
 4c. if class = 'Rogue Trader', randomly select last name from humanLastNames list.
 4d. if race = 'Space Marine', randomly select chapter from list.
-4c1. if chapter = 'Blood Angels' randomly select name from BloodAngelsNames list 
-4c2. if chapter = 'Space Wolves' randomly select name from SpaceWolvesNames list
+  _ if chapter = 'Blood Angels' randomly select name from BloodAngelsNames list 
+  _ if chapter = 'Space Wolves' randomly select name from SpaceWolvesNames list
 4c3. if chapter = 'Dark Angels' randomly select name from DarkAngelsNames list
 4c4. if chapter = 'Ultramarines' randomly select name from UltramarinesNames list
 4c5. if chapter = 'BlackTemplars' randomly select name from BlackTemplarsNames list
