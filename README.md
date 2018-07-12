@@ -7,8 +7,11 @@ So this is a learning project that started out as an effort to build a program t
 You have a character who's stats have been generated. We'll say the character is 'Invictus'. The character Invictus is then called on to make a weapon skill test agaisnt a target drone.
 if the attack is passed the program would generate the follow passage:
 "Invictus brought the sword around in a downward slash, bifurcating the target drone in a flurry of sparks, the image of a cultist being projected by it momentarily showing the simulated injury of having been sliced from left shoulder to right hip before flickering out of existence."
+
 if the attack is failed the program would generate the follow passage:
-"The heft of the sword sliced through nothing but air, the combined weight of the weapon and the inertia of the failed attack pulling Invictus off balance. The cogitator controlling the target drone having calculated that the cultist would be able to dodge Invictus' attack."
+"The heft of the sword sliced through nothing but air, the combined weight of the weapon and the inertia of the failed attack pulling Invictus off balance. The cogitator controlling the target drone having calculated that the cultist would be able to dodge Invictus' attack and thus had moved aside to avoid the bloe."
+
+The assembled story and the character sheets will then be output to a file (probably HTML but open to PDF as well).
 
 ## Background information and rules
 
