@@ -78,15 +78,15 @@ All characters can perform the following actions:
    - if race = 'Space Marine' set gender to 'male'
    
 4. Randomly select name from list of names
- _ if class = 'Rogue Trader' and gender = 'male', randomly select first name from maleFirstNames list. 
- _if class = 'Rogue Trader' and gender = 'female', randomly select first name from femaleFirstNames list.
- _if class = 'Rogue Trader', randomly select last name from humanLastNames list.
- _if race = 'Space Marine', randomly select chapter from list.
-   _if chapter = 'Blood Angels' randomly select name from BloodAngelsNames list 
-   _if chapter = 'Space Wolves' randomly select name from SpaceWolvesNames list
-4c3. if chapter = 'Dark Angels' randomly select name from DarkAngelsNames list
-4c4. if chapter = 'Ultramarines' randomly select name from UltramarinesNames list
-4c5. if chapter = 'BlackTemplars' randomly select name from BlackTemplarsNames list
+   - if class = 'Rogue Trader' and gender = 'male', randomly select first name from maleFirstNames list. 
+   - if class = 'Rogue Trader' and gender = 'female', randomly select first name from femaleFirstNames list.
+   - if class = 'Rogue Trader', randomly select last name from humanLastNames list.
+   - if race = 'Space Marine', randomly select chapter from list.
+     - if chapter = 'Blood Angels' randomly select name from BloodAngelsNames list 
+     - if chapter = 'Space Wolves' randomly select name from SpaceWolvesNames list
+     - if chapter = 'Dark Angels' randomly select name from DarkAngelsNames list
+     - if chapter = 'Ultramarines' randomly select name from UltramarinesNames list
+     - if chapter = 'BlackTemplars' randomly select name from BlackTemplarsNames list
 5. Randomly generate integer for Ballistic Skill characteristic
 6. Randomly generate integer for Weapon Skill characteristic
 7. Randomly generate integer for Strength characteristic
