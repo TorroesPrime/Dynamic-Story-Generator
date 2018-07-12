@@ -45,16 +45,16 @@ all Characters have a class. Class is affected by race, and gender and may be af
 All characters that are race 'Human' and class 'Rogue Trader' have the following Attributes:
 1. Title
 if a Rogue Trader gender == 'female' they may not have the following titles:
-1. Duke
-2. Lord
-3. Baron
+   -1. Duke
+   -2. Lord
+   -3. Baron
 if a Rogue Trader gender == 'female' they may have the following titles:
-1. Duchess
-2. Lady
-3. Damme 
-4. Barroness
+   -1. Duchess
+   -2. Lady
+   -3. Damme 
+   -4. Barroness
 if a Rogue Trader gender == 'male' they may not have the following titles:
-1. Lady
+   -1. Lady
 2. Duchess
 3. Dame
 4. Barroness
