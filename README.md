@@ -10,7 +10,7 @@ if the attack is passed the program would generate the follow passage:
 if the attack is failed the program would generate the follow passage:
 "The heft of the sword sliced through nothing but air, the combined weight of the weapon and the inertia of the failed attack pulling Invictus off balance. The cogitator controlling the target drone having calculated that the cultist would be able to dodge Invictus' attack."
 
-## Background information
+## Background information and rules
 
 Whenever a character is called on to do something, that is referred to has a 'test'. A test is conducted by generating a number between 1 and 100, and comparing that to the skill or attribute being tested on. If the number generated is higher then the skill or characteristic being tested, the tast is 'failed'. If the number generated is lower the test is passed. The difference between the two numbers is then %10 and that number is returned as the degree of success/failure. Sometimes it will need to be known by how much the character passed or failed. 
 
@@ -44,7 +44,24 @@ all Characters have a class. Class is affected by race, and gender and may be af
 
 All characters that are race 'Human' and class 'Rogue Trader' have the following Attributes:
 1. Title
-
+if a Rogue Trader gender == 'female' they may not have the following titles:
+1. Duke
+2. Lord
+3. Baron
+if a Rogue Trader gender == 'female' they may have the following titles:
+1. Duchess
+2. Lady
+3. Damme 
+4. Barroness
+if a Rogue Trader gender == 'male' they may not have the following titles:
+1. Lady
+2. Duchess
+3. Dame
+4. Barroness
+if a Rogue Trader gender == 'male' they may have the following titles:
+1. Duke
+2. Lord
+3. Baron
 
 All characters have a bonus for each of their characteristics that is determined by take the generated stat, and % it by 10. 
 Example: Ballistic Skill of 39 would have a Ballistic Skill Bonus of 3
