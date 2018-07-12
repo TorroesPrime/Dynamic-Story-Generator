@@ -75,9 +75,9 @@ All characters can perform the following actions:
 1. Randomly select race by selecting string from list of availible races
 2. Randomly select select class by selecting string from list of availible classes. Lists vary by race.
 3. Randomly Select Gender
-   _if race = 'Space Marine' set gender to 'male'
-   -if race = 'Space Marine' set gender to 'male'
-   *if race = 'Space Marine' set gender to 'male'
+   _ if race = 'Space Marine' set gender to 'male'
+   - if race = 'Space Marine' set gender to 'male'
+   * if race = 'Space Marine' set gender to 'male'
 4. Randomly select name from list of names
  _ if class = 'Rogue Trader' and gender = 'male', randomly select first name from maleFirstNames list. 
  _if class = 'Rogue Trader' and gender = 'female', randomly select first name from femaleFirstNames list.
