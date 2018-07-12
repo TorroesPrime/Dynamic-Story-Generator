@@ -17,7 +17,7 @@ Whenever a character is called on to do something, that is referred to has a 'te
 Example:
 Invictus has a Weapon Skill of 39. the generated number is 53. 
 
-All characters have 10 characteristics:
+All characters have 12 characteristics:
 1. Weapon Skill: the characters ability with melee weapon
 2. Ballistic Skill: the characters ability to shoot a weapon
 3. Strength: A character's strength
@@ -69,3 +69,30 @@ Example: Ballistic Skill of 39 would have a Ballistic Skill Bonus of 3
 All characters can perform the following actions:
 1. characteristic test
 2. skill test
+
+## Step by step process explination
+### Generating characters with no supplied information or specifications
+1. Randomly select race by selecting string from list of availible races
+2. Randomly select select class by selecting string from list of availible classes. Lists vary by race.
+3. Randomly Select Gender
+3a. if race = 'Space Marine' set gender to 'male'
+4. Randomly select name from list of names
+4a. if class = 'Rogue Trader' and gender = 'male', randomly select first name from maleFirstNames list.
+4b. if class = 'Rogue Trader' and gender = 'female', randomly select first name from femaleFirstNames list.
+4c. if class = 'Rogue Trader', randomly select last name from humanLastNames list.
+4d. if race = 'Space Marine', randomly select chapter from list.
+4c1. if chapter = 'Blood Angels' randomly select name from BloodAngelsNames list 
+4c2. if chapter = 'Space Wolves' randomly select name from SpaceWolvesNames list
+4c3. if chapter = 'Dark Angels' randomly select name from DarkAngelsNames list
+4c4. if chapter = 'Ultramarines' randomly select name from UltramarinesNames list
+4c5. if chapter = 'BlackTemplars' randomly select name from BlackTemplarsNames list
+5. Randomly generate integer for Ballistic Skill characteristic
+6. Randomly generate integer for Weapon Skill characteristic
+7. Randomly generate integer for Strength characteristic
+8. Randomly generate integer for Toughness characteristic
+9. Randomly generate integer for Agility characteristic
+10. Randomly generate integer for Intelligence characteristic
+11. Randomly generate integer for Perception characteristic
+12. Randomly generate integer for Fellowship characteristic
+13. Randomly generate integer for wounds characteristic
+14. set fatigue to 0
