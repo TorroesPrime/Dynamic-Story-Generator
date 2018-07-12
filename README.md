@@ -98,3 +98,4 @@ All characters can perform the following actions:
 14. set fatigue to 0
 15. fill out skill listing.
 - what skills a character has, and what level those skills are will vary based on race and class.
+
