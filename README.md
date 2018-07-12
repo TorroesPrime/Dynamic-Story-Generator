@@ -96,3 +96,5 @@ All characters can perform the following actions:
 12. Randomly generate integer for Fellowship characteristic
 13. Randomly generate integer for wounds characteristic
 14. set fatigue to 0
+15. fill out skill listing.
+- what skills a character has, and what level those skills are will vary based on race and class.
