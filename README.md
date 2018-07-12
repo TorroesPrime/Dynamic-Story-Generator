@@ -37,6 +37,7 @@ All characters have 12 characteristics:
 All characters have the following attributes:
 1. Race
 2. Name
+   - If race =! 'Space Marine' then character also has a 'Last Name'
 3. Gender
 4. A selection of skills
 5. An inventory 
