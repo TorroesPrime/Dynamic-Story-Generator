@@ -1,6 +1,6 @@
 This is just a list of names availible to characters that the program generates. The names are divided by what the qualified to have access to the speccified list are. These names will be contained in a file that will be read into the program.
 
-### human first names
+###human first names
 1. if race = 'human' and gender = 'female' 
     - Aoife 
     - Aspyce 
