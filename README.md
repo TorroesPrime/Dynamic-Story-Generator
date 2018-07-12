@@ -1,6 +1,6 @@
 # Dynamic Story Generator
 
-So this is a learning project that started out as an effort to build a program that could A- Randomly generate the materials or B- allow a user to select the materials for a  Character Sheet based on the Death Watch RPG. The goals of the project have grown and it is now being used to develop a program that will generate multiple characters, load an external system that will then use the generated/supplied characters to proceed through a series of action based tests and use the result of those tests to build a story piece by piece.
+So this is a learning project that started out as an effort to build a program that could A- Randomly generate the materials or B- allow a user to select the materials for a  Character Sheet based on the Death Watch RPG. The program is being built using Python 3.7 because that's the programming language I have the most knowledge of (which admittidly is very little). The goals of the project have grown and it is now being used to develop a program that will generate multiple characters, load an external system that will then use the generated/supplied characters to proceed through a series of action based tests and use the result of those tests to build a story piece by piece.
 
 ## Example of what it will do
 
