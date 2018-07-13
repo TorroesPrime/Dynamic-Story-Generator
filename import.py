@@ -1,28 +1,11 @@
-import pandas as pd
-from pandas import ExcelWriter
-from pandas import ExcelFile
-import random
-source = pd.read_excel('library.xlsx', sheet_name='names')
-HumanMaleNames = source['HumanMaleNames']
-HumanFemaleNames = source['HumanFemaleNames']
-HumanLastNames = source['HumanLastNames']
-HumanTitles = source['HumanTitles']
-BloodAngelNames = source['BloodAngelNames']
-BloodAngelTitles = source['BloodAngelTitles']
-DarkAngelNames = source['DarkAngelNames']
-DarkAngelTitles = source['DarkAngelTitles']
-SpaceWolvesNames = source['SpaceWolvesNames']
-SpaceWolvesTitles = source['SpaceWolvesTitles']
-UltramarinesNames = source['UltramarinesNames']
-UltramarinesTitles = source['UltramarinesTitles']
-BlackTemplarsNames = source['BlackTemplarsNames']
-BlackTemplarsTitles = source['BlackTemplarsTitles']
-print("Human Male name: "+random.choice(HumanMaleNames))
-print("Human Female name: "+random.choice(HumanFemaleNames))
-print("Human Last name: "+str(random.choice(HumanLastNames)))
-print("Blood Angels name: "+str(random.choice(BloodAngelNames)))
-print("Dark Angels name: "+str(random.choice(DarkAngelNames)))
-print("Space Wolves Name: "+str(random.choice(SpaceWolvesNames)))
-print("Space Wolves Title: "+str(random.choice(SpaceWolvesTitles)))
-print("Ultramarines Name: "+str(random.choice(UltramarinesNames)))
-print("Black Templar names: "+str(random.choice(BlackTemplarsNames)))
+import xlrd
+workbook = xlrd.open_workbook("library.xlsx")
+worksheet = workbook.sheet_by_name("names")
+HumanMaleNames = []
+print('the name at column 1, row 20 is: '+worksheet.cell(4,2).value)
+iteration = 1
+j = worksheet.cell(1,iteration).value
+while j != xlrd.empty_cell.value:
+    HumanMaleNames.append(j)
+    iteration += 1
+    print(str(iteration)+'name added to list')
