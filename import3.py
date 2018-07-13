@@ -32,6 +32,7 @@ while row < total_rows:
         print(j)
     else:
         print('finished phase 2')
+        row = total_rows
 print(HumanMaleNames)
 print(HumanFemaleNames)
 #else:
