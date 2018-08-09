@@ -128,7 +128,7 @@ class skill(object):
         self._descrip = descrip
         self._skill = {"Name" : self._name, "Characteristic":self._char,"Rank":self._rank,"Description":self._descrip}
     def skill_output(self):
-        print("Skill Name: "+self._name+"\nCharacteristic:"+self._char+"\nDescription:"+self._descrip)
+        print("Skill Name: "+self._name+"\nCharacteristic: "+self._char+"\nDescription: "+self._descrip)
     def skill_info(self):
         if self._stat == 'Stat_Strength':
             test_name = 'Strength'
