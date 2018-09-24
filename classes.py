@@ -132,7 +132,7 @@ class RogueTrader(character):
         #pass
     
 
-class skill(object):
+class CharacterSkill(object):
     def __init__ (self, name, char, rank, descrip):
         """skill object. Not finished obviously.
 
@@ -162,7 +162,7 @@ class skill(object):
     value, if you have mastered the skill (a 2 for training) you test with a +10 modifier"""
 
     
-class weapon(object):
+#class weapon(object):
     #just adding something to test git functionality
     """weapon class. Any sort of weapon used by a character.
 
@@ -179,19 +179,19 @@ class weapon(object):
     weight: an integer that represents how much the weapon weighs.
     requisition: cost of purchasing the weapon from the armory. an integer.
     renown: a string denoting the renown level a character must have to purchase a weapon from the armory. """
-    def __init__ (self, name, descript, weaponClass, weaponRange, RoF, Damage, Pen, clip, reload, special, weight, requisition, renown ):
-        self._name = name
-        self._descript = descript
-        self._weaponClass = weaponClass
-        self._range = weaponRange
-        self._roF = Rof
-        self._damage = Damage
-        self._pen = Pen
-        self._clip = clip
-        self._reload = reload
-        self._special = special,
-        self._weight = weight
-        self._requisition = requisition
-        self._renown = renown
+#    def __init__ (self, name, descript, weaponClass, weaponRange, RoF, Damage, Pen, clip, reload, special, weight, requisition, renown ):
+#        self._name = name
+#        self._descript = descript
+#        self._weaponClass = weaponClass
+#        self._range = weaponRange
+#        self._roF = Rof
+#        self._damage = Damage
+#        self._pen = Pen
+#        self._clip = clip
+#        self._reload = reload
+#        self._special = special,
+#        self._weight = weight
+#        self._requisition = requisition
+#        self._renown = renown
 
 

@@ -4,6 +4,7 @@ from library import *
 #from classes import *
 #from classes import skill
 import ObjectsandClassesLibrary
+from ObjectsandClassesLibrary import CharacterSkill
 
 workbook = xlrd.open_workbook("library.xlsx")
 worksheet = workbook.sheet_by_name("names")
@@ -249,7 +250,7 @@ while row < total_rows:
             print('Characteristic: '+str(char))
             print('Rank: '+str(rank))
             print('Skill Description: '+str(descrip))
-        NewSkill = skill(name,char,rank,descrip)
+        NewSkill = CharacterSkill(name,char,rank,descrip)
         skills.append(NewSkill)
         column = 0
         row += 1
