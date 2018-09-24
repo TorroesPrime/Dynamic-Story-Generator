@@ -163,6 +163,7 @@ class skill(object):
 
     
 class weapon(object):
+    #just adding something to test git functionality
     """weapon class. Any sort of weapon used by a character.
 
     name: the name of the weapon. A string
