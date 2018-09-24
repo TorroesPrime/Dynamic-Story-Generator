@@ -50,25 +50,35 @@ skills_total_rows = skillsWorksheet.nrows
 print("Skill Groups")
 while row < skills_total_rows:
     if skillsWorksheet.cell(row,column).value != xlrd.empty_cell.value:
+    #skill name
         name = skillsWorksheet.cell(row,column).value
-        column += 1
+        #column += 1
         if test == True:
             print('column: '+str(column))
             print('row: '+str(row))
+            print("Name: "+str(name))
+        column += 1
+    #skill_char
         char = skillsWorksheet.cell(row,column).value
-        column += 1
         if test == True:
             print('column: '+str(column))
             print('row: '+str(row))
+            print("Characteristic: "+str(char))
+        column += 1
+    #topic
         topic = skillsWorksheet.cell(row,column).value
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+            print("topic: "+str(topic))
+    #rank
+        rank = skillsWorksheet.cell(row,column).value
         column += 1
         if test == True:
             print('column: '+str(column))
             print('row: '+str(row))
-        rank = int(skillsWorksheet.cell(row,column).value)
-        if test == True:
-            print('column: '+str(column))
-            print('row: '+str(row))
+            print("rank: "+str(rank))
+    #descrip
         descrip = skillsWorksheet.cell(row,column).value
         if test == True:
             print('Skill Name: '+str(name))
@@ -84,6 +94,6 @@ while row < skills_total_rows:
         if test == True:
             print('finished skills phase')
         row = skills_total_rows
-for SkillEntry in skills:
-    print("------------------------"+SkillEntry._name+"------------------------")
-    print(SkillEntry._descrip)
+#for SkillEntry in skills:
+ #   print("------------------------"+SkillEntry._name+"------------------------")
+ #  print(SkillEntry._descrip)
