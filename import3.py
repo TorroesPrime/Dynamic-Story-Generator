@@ -3,8 +3,8 @@ import random
 from library import *
 #from classes import *
 #from classes import skill
-import ObjectsandClassesLibrary
-from ObjectsandClassesLibrary import CharacterSkill
+#import ObjectsandClassesLibrary
+#from ObjectsandClassesLibrary import CharacterSkill
 
 workbook = xlrd.open_workbook("library.xlsx")
 worksheet = workbook.sheet_by_name("names")
@@ -227,38 +227,6 @@ while row < total_rows:
 LastRow = 1
 total_rows = skillsWorksheet.nrows
 row = 1
-while row < total_rows:
-    if worksheet.cell(row,21).value != xlrd.empty_cell.value:
-        name = skillsWorksheet.cell(row,column).value
-        column += 1
-        if test == True:
-            print('column: '+str(column))
-            print('row: '+str(row))
-        char = skillsWorksheet.cell(row,column).value
-        column += 1
-        if test == True:
-            print('column: '+str(column))
-            print('row: '+str(row))
-        rank = int(skillsWorksheet.cell(row,column).value)
-        column += 1
-        if test == True:
-            print('column: '+str(column))
-            print('row: '+str(row))
-        descrip = skillsWorksheet.cell(row,column).value
-        if test == True:
-            print('Skill Name: '+str(name))
-            print('Characteristic: '+str(char))
-            print('Rank: '+str(rank))
-            print('Skill Description: '+str(descrip))
-        NewSkill = CharacterSkill(name,char,rank,descrip)
-        skills.append(NewSkill)
-        column = 0
-        row += 1
-    else:
-        if test == True:
-            print('finished skills phase')
-        row = total_rows
-
 HumanTitles_m = [x for x in HumanTitles if x != "Duchess"]
 HumanTitles_m = [x for x in HumanTitles_m if x != "Lady"]
 HumanTitles_m = [x for x in HumanTitles_m if x != "Damme"]

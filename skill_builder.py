@@ -1,44 +1,89 @@
 import xlrd
-from classes import *
+from library import skills
+from ObjectsandClassesLibrary import CharacterSkill, CharacterSkillGroup
 workbook = xlrd.open_workbook("library.xlsx")
-skills = workbook.sheet_by_name("skills")
+skillsWorksheet = workbook.sheet_by_name("skills")
+test = False
 row = 1
-cols = 0
+column = 0
 skills_library = []
-skills_total_rows = skills.nrows
+skills_total_rows = skillsWorksheet.nrows
 while row < skills_total_rows:
-    while cols < 4:
-        j = skills.cell(row,cols).value
-        #print(j)
-        if cols == 0:
-            name = j
-            #return name
-        elif cols == 1:
-            char = j
-            #return char
-        elif cols == 2:
-            rank = j
-            #return rank
-        else:
-            descrip = j
-            #return descrip
-        #print(i)
-        cols += 1
-    
-    skill_01= skill(name, char, rank, descrip)
-    #skill_01.skill_output()
-    skills_library.append(skill_01)
-    row += 1
-    cols = 0
-for skill in skills_library:
-    print('='*80)
-    skill.skill_output()
-    
+    if skillsWorksheet.cell(row,column).value != xlrd.empty_cell.value:
+        name = skillsWorksheet.cell(row,column).value
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        char = skillsWorksheet.cell(row,column).value
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        rank = int(skillsWorksheet.cell(row,column).value)
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        descrip = skillsWorksheet.cell(row,column).value
+        if test == True:
+            print('Skill Name: '+str(name))
+            print('Characteristic: '+str(char))
+            print('Rank: '+str(rank))
+            print('Skill Description: '+str(descrip))
+        NewSkill = CharacterSkill(name,char,rank,descrip)
+        skills.append(NewSkill)
+        column = 0
+        row += 1
+    else:
+        if test == True:
+            print('finished skills phase')
+        row = skills_total_rows
 
-print('finished')
-#name = "name_01"
-#char = "Char_01"
-#rank = 0
-#descrip = """long description of the skill"""
-#skill_01 = skill(name, char, rank, descrip)
-#skill_01.skill_output()
+
+skillsWorksheet = workbook.sheet_by_name("SkillGroups")
+test = True
+row = 1
+column = 0
+skills_library = []
+skills_total_rows = skillsWorksheet.nrows
+print("Skill Groups")
+while row < skills_total_rows:
+    if skillsWorksheet.cell(row,column).value != xlrd.empty_cell.value:
+        name = skillsWorksheet.cell(row,column).value
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        char = skillsWorksheet.cell(row,column).value
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        topic = skillsWorksheet.cell(row,column).value
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        rank = int(skillsWorksheet.cell(row,column).value)
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        descrip = skillsWorksheet.cell(row,column).value
+        if test == True:
+            print('Skill Name: '+str(name))
+            print('Topic: '+str(topic))
+            print('Characteristic: '+str(char))
+            print('Rank: '+str(rank))
+            print('Skill Description: '+str(descrip))
+        NewSkill = CharacterSkillGroup(name,char,topic,rank,descrip)
+        skills.append(NewSkill)
+        column = 0
+        row += 1
+    else:
+        if test == True:
+            print('finished skills phase')
+        row = skills_total_rows
+for SkillEntry in skills:
+    print("------------------------"+SkillEntry._name+"------------------------")
+    print(SkillEntry._descrip)
