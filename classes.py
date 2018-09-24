@@ -1,8 +1,8 @@
 import random
 #from library import *
-from library import worksheet,skillsWorksheet,divider,pageBreak,div_char,spacer,homeworld,birthright_1,birthright_2,birthright_3,birthright_4,birthright_5,birthright_6,voidLure_1,voidLure_2,voidLure_3,voidLure_4,voidLure_5,voidLure_6,trials_1,trials_2,trials_3,trials_4,trials_5,trials_6,motives_1,motives_2,motives_3,motives_4,motives_5,motives_6,HiveWorldNames,HumanMaleNames,HumanFemaleNames,HumanLastNames,HumanTitles,BloodAngelNames,BloodAngelTitles,DarkAngelNames,DarkAngelTitles,SpaceWolvesNames,SpaceWolvesTitles,UltramarinesNames,UltramarinesTitles,BlackTemplarsNames,BlackTemplarsTitles,DeamonSyllabals,DeathWorldNames,VoidBornNames,ForgeWorldNames,HiveWorldNames,ImpWorldNames,NobleBornWorldNames,skills 
+from library import *
 from import3 import *
-#from BG_human import *
+
 """library is a series of lists of strings. They are used for selecting names of characters,
 selecting what role SpaceMarine characters get. etc. """
 def intro():

@@ -3,7 +3,7 @@ import random
 from library import *
 #from classes import *
 #from classes import skill
-import classes
+import ObjectsandClassesLibrary
 
 workbook = xlrd.open_workbook("library.xlsx")
 worksheet = workbook.sheet_by_name("names")
@@ -16,7 +16,7 @@ j = worksheet.cell(row,0).value
 LastRow = 1
 total_rows = worksheet.nrows
 column = 0
-test = True
+test = False
 while row < total_rows:
     j = worksheet.cell(row,0).value
     HumanMaleNames.append(j)
@@ -249,7 +249,7 @@ while row < total_rows:
             print('Characteristic: '+str(char))
             print('Rank: '+str(rank))
             print('Skill Description: '+str(descrip))
-        NewSkill = classes.skill(name,char,rank,descrip)
+        NewSkill = skill(name,char,rank,descrip)
         skills.append(NewSkill)
         column = 0
         row += 1
@@ -269,8 +269,8 @@ HumanTitles_f = [x for x in HumanTitles_f if x != "Baron"]
 #print("Human titles for male characters:")
 #print(HumanTitles_m)
 
-rHM = random.choice(HumanTitles_m)+' '+random.choice(HumanMaleNames)+' '+random.choice(HumanLastNames)
+#rHM = random.choice(HumanTitles_m)+' '+random.choice(HumanMaleNames)+' '+random.choice(HumanLastNames)
 #rHF = random.choice(HumanTitles_f)+' '+random.choice(HumanFemaleNames)+' '+random.choice(HumanLastNames)
-print(rHM)
+#print(rHM)
 #print(rHF)
-print("finished")
+#print("finished")
