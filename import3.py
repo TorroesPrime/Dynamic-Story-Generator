@@ -1,35 +1,28 @@
 import xlrd
 import random
+from library import *
+#from classes import *
+#from classes import skill
+import classes
+
 workbook = xlrd.open_workbook("library.xlsx")
 worksheet = workbook.sheet_by_name("names")
-HumanMaleNames = []
-HumanFemaleNames = []
-HumanLastNames = []
-HumanTitles = []
-BloodAngelNames = []
-BloodAngelTitles = []
-DarkAngelNames = []
-DarkAngelTitles = []
-SpaceWolvesNames = []
-SpaceWolvesTitles = []
-UltramarinesNames = []
-UltramarinesTitles =[]
-BlackTemplarsNames = []
-BlackTemplarsTitles = []
-DeamonSyllabals = []
 row = 1
-j = worksheet.cell(1,0).value
-row += 1
-j = worksheet.cell(2,0).value
-row += 1
+#j = worksheet.cell(1,0).value
+#row += 1
+#j = worksheet.cell(2,0).value
+#row += 1
 j = worksheet.cell(row,0).value
 LastRow = 1
 total_rows = worksheet.nrows
+column = 0
+test = True
 while row < total_rows:
     j = worksheet.cell(row,0).value
     HumanMaleNames.append(j)
     row += 1
-print('finished phase 1')
+if test == True:
+        print('finished phase 1')
 row = 1
 while row < total_rows:
     if worksheet.cell(row,1).value != xlrd.empty_cell.value:
@@ -37,7 +30,8 @@ while row < total_rows:
         HumanFemaleNames.append(j)
         row += 1
     else:
-        print('finished phase 2')
+        if test == True:
+            print('finished phase 2')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -46,7 +40,8 @@ while row < total_rows:
         HumanLastNames.append(j)
         row += 1
     else:
-        print('finished phase 2')
+        if test == True:
+            print('finished phase 2')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -55,7 +50,8 @@ while row < total_rows:
         HumanTitles.append(j)
         row += 1
     else:
-        print('finished phase 3')
+        if test == True:
+            print('finished phase 3')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -64,7 +60,8 @@ while row < total_rows:
         BloodAngelNames.append(j)
         row += 1
     else:
-        print('finished phase 4')
+        if test == True:
+            print('finished phase 4')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -73,7 +70,8 @@ while row < total_rows:
         BloodAngelTitles.append(j)
         row += 1
     else:
-        print('finished phase 5')
+        if test == True:
+            print('finished phase 5')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -82,7 +80,8 @@ while row < total_rows:
         DarkAngelNames.append(j)
         row += 1
     else:
-        print('finished phase 6')
+        if test == True:
+            print('finished phase 6')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -91,7 +90,8 @@ while row < total_rows:
         DarkAngelTitles.append(j)
         row += 1
     else:
-        print('finished phase 7')
+        if test == True:
+            print('finished phase 7')
         row = total_rows       
 row = 1
 while row < total_rows:
@@ -100,7 +100,8 @@ while row < total_rows:
         SpaceWolvesNames.append(j)
         row += 1
     else:
-        print('finished phase 8')
+        if test == True:
+            print('finished phase 8')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -109,7 +110,8 @@ while row < total_rows:
         SpaceWolvesTitles.append(j)
         row += 1
     else:
-        print('finished phase 9')
+        if test == True:
+            print('finished phase 9')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -118,7 +120,8 @@ while row < total_rows:
         UltramarinesNames.append(j)
         row += 1
     else:
-        print('finished phase 10')
+        if test == True:
+            print('finished phase 10')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -127,7 +130,8 @@ while row < total_rows:
         UltramarinesTitles.append(j)
         row += 1
     else:
-        print('finished phase 11')
+        if test == True:
+            print('finished phase 11')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -136,7 +140,8 @@ while row < total_rows:
         BlackTemplarsNames.append(j)
         row += 1
     else:
-        print('finished phase 12')
+        if test == True:
+            print('finished phase 12')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -145,7 +150,8 @@ while row < total_rows:
         BlackTemplarsTitles.append(j)
         row += 1
     else:
-        print('finished phase 13')
+        if test == True:
+            print('finished phase 13')
         row = total_rows
 row = 1
 while row < total_rows:
@@ -154,9 +160,104 @@ while row < total_rows:
         DeamonSyllabals.append(j)
         row += 1
     else:
-        print('finished phase 14')
+        if test == True:
+            print('finished phase 14')
         row = total_rows
 row = 1
+while row < total_rows:
+    if worksheet.cell(row,16).value != xlrd.empty_cell.value:
+        j = worksheet.cell(row,16).value
+        DeathWorldNames.append(j)
+        row += 1
+    else:
+        if test == True:
+            print('finished phase 15')
+        row = total_rows
+row = 1
+while row < total_rows:
+    if worksheet.cell(row,17).value != xlrd.empty_cell.value:
+        j = worksheet.cell(row,17).value
+        VoidBornNames.append(j)
+        row += 1
+    else:
+        if test == True:
+            print('finished phase 16')
+        row = total_rows
+row = 1
+while row < total_rows:
+    if worksheet.cell(row,18).value != xlrd.empty_cell.value:
+        j = worksheet.cell(row,18).value
+        ForgeWorldNames.append(j)
+        row += 1
+    else:
+        if test == True:
+            print('finished phase 17')
+        row = total_rows
+row = 1
+while row < total_rows:
+    if worksheet.cell(row,19).value != xlrd.empty_cell.value:
+        j = worksheet.cell(row,19).value
+        HiveWorldNames.append(j)
+        row += 1
+    else:
+        if test == True:
+            print('finished phase 18')
+        row = total_rows
+row = 1
+while row < total_rows:
+    if worksheet.cell(row,20).value != xlrd.empty_cell.value:
+        j = worksheet.cell(row,20).value
+        ImpWorldNames.append(j)
+        row += 1
+    else:
+        if test == True:
+            print('finished phase 19')
+        row = total_rows
+row = 1
+while row < total_rows:
+    if worksheet.cell(row,21).value != xlrd.empty_cell.value:
+        j = worksheet.cell(row,21).value
+        NobleBornWorldNames.append(j)
+        row += 1
+    else:
+        if test == True:
+            print('finished phase 20')
+        row = total_rows
+LastRow = 1
+total_rows = skillsWorksheet.nrows
+row = 1
+while row < total_rows:
+    if worksheet.cell(row,21).value != xlrd.empty_cell.value:
+        name = skillsWorksheet.cell(row,column).value
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        char = skillsWorksheet.cell(row,column).value
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        rank = int(skillsWorksheet.cell(row,column).value)
+        column += 1
+        if test == True:
+            print('column: '+str(column))
+            print('row: '+str(row))
+        descrip = skillsWorksheet.cell(row,column).value
+        if test == True:
+            print('Skill Name: '+str(name))
+            print('Characteristic: '+str(char))
+            print('Rank: '+str(rank))
+            print('Skill Description: '+str(descrip))
+        NewSkill = classes.skill(name,char,rank,descrip)
+        skills.append(NewSkill)
+        column = 0
+        row += 1
+    else:
+        if test == True:
+            print('finished skills phase')
+        row = total_rows
+
 HumanTitles_m = [x for x in HumanTitles if x != "Duchess"]
 HumanTitles_m = [x for x in HumanTitles_m if x != "Lady"]
 HumanTitles_m = [x for x in HumanTitles_m if x != "Damme"]
@@ -165,11 +266,11 @@ HumanTitles_m = [x for x in HumanTitles_m if x != "Dame"]
 HumanTitles_f = [x for x in HumanTitles if x != "Duke"]
 HumanTitles_f = [x for x in HumanTitles_f if x != "Lord"]
 HumanTitles_f = [x for x in HumanTitles_f if x != "Baron"]
-print("Human titles for male characters:")
-print(HumanTitles_m)
+#print("Human titles for male characters:")
+#print(HumanTitles_m)
 
 rHM = random.choice(HumanTitles_m)+' '+random.choice(HumanMaleNames)+' '+random.choice(HumanLastNames)
-rHF = random.choice(HumanTitles_f)+' '+random.choice(HumanFemaleNames)+' '+random.choice(HumanLastNames)
+#rHF = random.choice(HumanTitles_f)+' '+random.choice(HumanFemaleNames)+' '+random.choice(HumanLastNames)
 print(rHM)
-print(rHF)
+#print(rHF)
 print("finished")

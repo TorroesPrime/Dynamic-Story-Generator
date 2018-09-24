@@ -1,6 +1,6 @@
 import random
 from import3 import *
-from library import *
+#from library import *
 
 def BackGroundSelector():
     CharBG = {"Homeworld Type":"","Homeworld":"","Birth Right":"","Lure of the Void":"","Trial":"","Motive":""}

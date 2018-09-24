@@ -1,5 +1,8 @@
 import random
-from library import *
+#from library import *
+from library import worksheet,skillsWorksheet,divider,pageBreak,div_char,spacer,homeworld,birthright_1,birthright_2,birthright_3,birthright_4,birthright_5,birthright_6,voidLure_1,voidLure_2,voidLure_3,voidLure_4,voidLure_5,voidLure_6,trials_1,trials_2,trials_3,trials_4,trials_5,trials_6,motives_1,motives_2,motives_3,motives_4,motives_5,motives_6,HiveWorldNames,HumanMaleNames,HumanFemaleNames,HumanLastNames,HumanTitles,BloodAngelNames,BloodAngelTitles,DarkAngelNames,DarkAngelTitles,SpaceWolvesNames,SpaceWolvesTitles,UltramarinesNames,UltramarinesTitles,BlackTemplarsNames,BlackTemplarsTitles,DeamonSyllabals,DeathWorldNames,VoidBornNames,ForgeWorldNames,HiveWorldNames,ImpWorldNames,NobleBornWorldNames,skills 
+from import3 import *
+#from BG_human import *
 """library is a series of lists of strings. They are used for selecting names of characters,
 selecting what role SpaceMarine characters get. etc. """
 def intro():
@@ -72,25 +75,31 @@ class character(object):
    #     stat = int(random.randint(1,20+raceBonus)
    #     return stat
 
-    def AutoMaker(type):
+    def AutoMaker(self, type):
         """AutoMaker method
         Automatic constructor. It just automatically builds a character object when called."""
-        race = 'human'
-        raceBonus = 0
+        if type == "Human":
+            race = 'human'
+            raceBonus = 25
+        else:
+            race = 'human'
+            raceBonus = 20
+        #print(raceBonus)
+        #print(race)
         coinflip = random.randint(1,2)
         if coinflip == 1:
             gender = 'Male'
         else:
             gender = 'Female'
-        Stat_WS = int(random.randint(1,20+raceBonus))
-        Stat_BS = int(random.randint(1,20+raceBonus))
-        Stat_Strength = int(random.randint(1,20+raceBonus))
-        Stat_Tough = int(random.randint(1,20+raceBonus))
-        Stat_Agility = int(random.randint(1,20+raceBonus))
-        Stat_Int = int(random.randint(1,20+raceBonus))
-        Stat_Perc = int(random.randint(1,20+raceBonus))
-        Stat_WP = int(random.randint(1,20+raceBonus))
-        Stat_Fell = int(random.randint(1,20+raceBonus))
+        Stat_WS = int(random.randint(1,20)+raceBonus)
+        Stat_BS = int(random.randint(1,20)+raceBonus)
+        Stat_Strength = int(random.randint(1,20)+raceBonus)
+        Stat_Tough = int(random.randint(1,20)+raceBonus)
+        Stat_Agility = int(random.randint(1,20)+raceBonus)
+        Stat_Int = int(random.randint(1,20)+raceBonus)
+        Stat_Perc = int(random.randint(1,20)+raceBonus)
+        Stat_WP = int(random.randint(1,20)+raceBonus)
+        Stat_Fell = int(random.randint(1,20)+raceBonus)
         wounds = random.randint(1,10)+18
         fatigue = 0
         if gender == 'Male':
@@ -98,21 +107,30 @@ class character(object):
         else:
             Fname = random.choice(HumanFemaleNames)
         Lname = random.choice(HumanLastNames)
-#returns a character Object with the values generated and selected. 
+#returns a character Object with the values generated and selected.
         return character(race, gender, Fname, Lname, Stat_WS, Stat_BS, Stat_Strength, Stat_Tough, Stat_Agility, Stat_Int, Stat_Perc, Stat_WP, Stat_Fell, wounds)
 
     def character_sheet(self):
         """Character sheet Generation function. Outputs a charactersheet with the characteristics."""
-        divider = "-"*78
-        div_char = "-"*32+"Characteristics"+"-"*31
-        spacer = '      '
         print(divider)
         print("Character Name: "+self.FullName+"    Character Race: "+self.race+"     Gender: "+self.gender)
         print("Character Wounds: "+str(self.wounds)+"         Character Fatigue: "+str(self.fatigue))
         print(divider)
         print(div_char)
         print(" WS:{WS}  BS:{BS}    S:{S}    T:{T}   Ag:{Ag}   Int:{Int}  Per:{Per}   WP:{WP}   Fel:{Fel}      ".format(WS=self.Stat_WS, BS=self.Stat_BS, S=self.Stat_Strength , T=self.Stat_Tough , Ag=self.Stat_Agility, Int=self.Stat_Int,Per=self.Stat_Perc,WP=self.Stat_WP,Fel=self.Stat_Fell))
+        print(divider)
+        for skill in skills:
+            print
+        print(pageBreak)
+
 #        print(spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS))
+class RogueTrader(character):
+    race = 'human'
+    raceBonus = random.randint(20,28)
+    def character_sheet(self):
+        print('yes')
+        #pass
+    
 
 class skill(object):
     def __init__ (self, name, char, rank, descrip):
@@ -127,19 +145,12 @@ class skill(object):
         self._rank = rank
         self._descrip = descrip
         self._skill = {"Name" : self._name, "Characteristic":self._char,"Rank":self._rank,"Description":self._descrip}
+    
     def skill_output(self):
         print("Skill Name: "+self._name+"\nCharacteristic: "+self._char+"\nDescription: "+self._descrip)
     def skill_info(self):
-        if self._stat == 'Stat_Strength':
-            test_name = 'Strength'
-        if self._training == 0:
-            skill_training = 'Basic, untrained'
-        elif self._training == 1:
-            skill_training = 'Basic, trained'
-        elif self._training == 2:
-            skill_training = 'Advanced, trained'
-        print('Skill: '+self._name+'\nTest on: '+test_name+'\nTraining: '+skill_training+'\nDescription: '+self._descrip)
-    def SkillTest():
+        pass
+    def SkillTest(self):
         pass
     """SkillTest is used when a character needs to perform a test against a skill.
 
