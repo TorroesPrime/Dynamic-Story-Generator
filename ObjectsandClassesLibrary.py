@@ -2,6 +2,7 @@ import random
 #from library import *
 from library import *
 from import3 import *
+from skill_builder import skills
 
 """library is a series of lists of strings. They are used for selecting names of characters,
 selecting what role SpaceMarine characters get. etc. """
@@ -75,10 +76,10 @@ class character(object):
    #     stat = int(random.randint(1,20+raceBonus)
    #     return stat
 
-    def AutoMaker(self, type):
+    def AutoMaker(Chartype):
         """AutoMaker method
         Automatic constructor. It just automatically builds a character object when called."""
-        if type == "Human":
+        if Chartype == "Human":
             race = 'human'
             raceBonus = 25
         else:
@@ -199,19 +200,19 @@ class weapon(object):
     weight: an integer that represents how much the weapon weighs.
     requisition: cost of purchasing the weapon from the armory. an integer.
     renown: a string denoting the renown level a character must have to purchase a weapon from the armory. """
-    def __init__ (self, name, descript, weaponClass, weaponRange, RoF, Damage, Pen, clip, reload, special, weight, requisition, renown ):
-        self._name = name
-        self._descript = descript
-        self._weaponClass = weaponClass
-        self._range = weaponRange
-        self._roF = Rof
-        self._damage = Damage
-        self._pen = Pen
-        self._clip = clip
-        self._reload = reload
-        self._special = special,
-        self._weight = weight
-        self._requisition = requisition
-        self._renown = renown
+   # def __init__ (self, name, descript, weaponClass, weaponRange, RoF, Damage, Pen, clip, reload, special, weight, requisition, renown ):
+   #     self._name = name
+   #     self._descript = descript
+   #     self._weaponClass = weaponClass
+   #     self._range = weaponRange
+   #     self._roF = Rof
+   #     self._damage = Damage
+   #     self._pen = Pen
+   #    self._clip = clip
+   #    self._reload = reload
+   #     self._special = special,
+   #    self._weight = weight
+   #     self._requisition = requisition
+   #     self._renown = renown
 
 

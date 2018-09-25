@@ -4,11 +4,11 @@ Genhuman = []
 RT_human = []
 
 for i in range (0,4):
-    CharType = 'Human'
-    genNPC = character.AutoMaker(CharType)
+    A = 'Human'
+    genNPC = character.AutoMaker(A)
     Genhuman.append(genNPC)
     count += 1
-    genNPC = RogueTrader.AutoMaker(CharType)
+    genNPC = RogueTrader.AutoMaker(A)
     RT_human.append(genNPC)
     count += 1
 
