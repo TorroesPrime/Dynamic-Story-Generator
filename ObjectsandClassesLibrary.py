@@ -1,3 +1,4 @@
+#notes added
 import random
 #from library import *
 from library import *
