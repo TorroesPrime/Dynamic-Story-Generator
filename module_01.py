@@ -1,8 +1,12 @@
+#from ObjectsandClassesLibrary import character
+#from ObjectsandClassesLibrary import *
 from ObjectsandClassesLibrary import character, RogueTrader
 count = 1
 Genhuman = []
 RT_human = []
-
+NPC1 = character.AutoMaker("Human")
+NPC2 = character.AutoMaker("Human")
+NPC3 = character.AutoMaker("Human")
 for i in range (0,4):
     A = 'Human'
     genNPC = character.AutoMaker(A)
@@ -24,4 +28,5 @@ for chars in RT_human:
     print("Entry=========="+str(count))
     chars.character_sheet()
     count += 1    
+
 

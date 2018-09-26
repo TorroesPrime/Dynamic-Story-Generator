@@ -77,7 +77,9 @@ class character(object):
    #     return stat
 
     def AutoMaker(Chartype):
-        """AutoMaker method
+        @classmethod
+        """AutoMaker method. 
+        
         Automatic constructor. It just automatically builds a character object when called."""
         if Chartype == "Human":
             race = 'human'
