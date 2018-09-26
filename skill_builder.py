@@ -1,3 +1,4 @@
+#working on changing names to conform to PEP8 standars. 9/26/2018 9:06am -MGC
 import xlrd
 from library import skills
 #from ObjectsandClassesLibrary import CharacterSkill, CharacterSkillGroup
