@@ -1,7 +1,8 @@
 import xlrd
 from library import skills
 #from ObjectsandClassesLibrary import CharacterSkill, CharacterSkillGroup
-from ObjectsandClassesLibrary import *
+#from ObjectsandClassesLibrary import *
+import ObjectsandClassesLibrary
 workbook = xlrd.open_workbook("library.xlsx")
 skillsWorksheet = workbook.sheet_by_name("skills")
 test = False

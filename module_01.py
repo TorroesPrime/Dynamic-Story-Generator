@@ -1,6 +1,7 @@
 #from ObjectsandClassesLibrary import character
 #from ObjectsandClassesLibrary import *
-from ObjectsandClassesLibrary import character, RogueTrader
+import ObjectsandClassesLibrary
+#from ObjectsandClassesLibrary import character, RogueTrader
 count = 1
 Genhuman = []
 RT_human = []

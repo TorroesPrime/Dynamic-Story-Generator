@@ -75,13 +75,12 @@ class character(object):
    # def StatBuilder(racebonus):
    #     stat = int(random.randint(1,20+raceBonus)
    #     return stat
+    @classmethod
+    def AutoMaker(type):
 
-    def AutoMaker(Chartype):
-        @classmethod
         """AutoMaker method. 
-        
         Automatic constructor. It just automatically builds a character object when called."""
-        if Chartype == "Human":
+        if type == "Human":
             race = 'human'
             raceBonus = 25
         else:
@@ -136,6 +135,7 @@ class RogueTrader(character):
     
 
 class CharacterSkill(object):
+    @classmethod
     def __init__ (self, name, char, rank, descrip):
         """skill object. Not finished obviously.
 
