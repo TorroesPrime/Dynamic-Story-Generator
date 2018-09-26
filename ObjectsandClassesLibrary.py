@@ -77,7 +77,7 @@ class character(object):
    #     stat = int(random.randint(1,20+raceBonus)
    #     return stat
     @classmethod
-    def AutoMaker(type):
+    def AutoMaker(cls, type):
 
         """AutoMaker method. 
         Automatic constructor. It just automatically builds a character object when called."""
@@ -137,7 +137,7 @@ class RogueTrader(character):
 
 class CharacterSkill(object):
     @classmethod
-    def __init__ (self, name, char, rank, descrip):
+    def __init__ (cls, name, char, rank, descrip):
         """skill object. Not finished obviously.
 
     But the idea is to have a skill object with a name that would be a string(name), what characteristic
