@@ -39,14 +39,9 @@ def intro():
 
 
 #        print(spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill)+spacer+str(self.stats_weapon_skill))
-class RogueTrader(character):
-    race = 'human'
-    racebonus = random.randint(20,28)
-    def character_sheet(self):
-        print('yes')
-        #pass
 
-    
+
+
 class weapon(object):
     #just adding something to test git functionality
     """weapon class. Any sort of weapon used by a Character.
