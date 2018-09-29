@@ -2,6 +2,8 @@ import random
 
 
 class GameCharacter:
+    stats = None
+
     """
     GameCharacter class.
 
@@ -12,8 +14,9 @@ class GameCharacter:
     char_stats dictionary to make it easier to run through all the stats when making a stat check or test.
     """
 
-    def __init__(self, race, gender, firstname, lastname, stats_weapon_skill, stats_ballistic_skill, stat_strength,
-                 stat_tough, stat_agility, stat_int, stat_perc, stat_will_power, stat_fellowship, wounds):
+    def __init__(self, ThisCharacterStats):
+        self.stats = ThisCharacterStats
+        
         self.race = race
         self.race_bonus = 0
         self.gender = gender
