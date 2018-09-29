@@ -8,36 +8,38 @@ selecting what role SpaceMarine characters get. etc. """
 def intro():
     """Introduction to file
 
-        This file contains the classes and methods used for each character.
+        This file contains the classes and methods used for each Character.
         -class skill(object): skill objects for a characters including the SkillTest Method
-        +skill.SkillTest: Used when a character performs a test on a selected skill.
+        +skill.SkillTest: Used when a Character performs a test on a selected skill.
         -class Character(object): Basic characer class.
-        +CharSheet: Produces a character sheet.
+        +CharSheet: Produces a Character sheet.
         +StatTest: Used to test on a given stat.
-        +StatBuilder: used to generate stats at character generation.
+        +StatBuilder: used to generate stats at Character generation.
         +Automaker: a factory method for generating characters at random.
-        -class SpaceMarine(Character): character class for space marines, inherits from class
-        character
-        +CharSheet: Produces a character sheet for a Space Marine Character.
+        -class SpaceMarine(Character): Character class for space marines, inherits from class
+        Character
+        +CharSheet: Produces a Character sheet for a Space Marine Character.
         """
     intro =     """Introduction to file
 
-        This file contains the classes and methods used for each character.
+        This file contains the classes and methods used for each Character.
         -class skill(object): skill objects for a characters including the SkillTest Method
-        +skill.SkillTest: Used when a character performs a test on a selected skill.
+        +skill.SkillTest: Used when a Character performs a test on a selected skill.
         -class Character(object): Basic characer class.
-        +CharSheet: Produces a character sheet.
+        +CharSheet: Produces a Character sheet.
         +StatTest: Used to test on a given stat.
-        +StatBuilder: used to generate stats at character generation.
+        +StatBuilder: used to generate stats at Character generation.
         +Automaker: a factory method for generating characters at random.
-        -class SpaceMarine(Character): character class for space marines, inherits from class \n character
-        +CharSheet: Produces a character sheet for a Space Marine Character.
+        -class SpaceMarine(Character): Character class for space marines, inherits from class \n Character
+        +CharSheet: Produces a Character sheet for a Space Marine Character.
         """
     print(intro)
-class character(object):
+
+
+class Character(object):
     """Character class.
 
-    The basic character class. Each character has a string for their name (name), 10 basic characteristics
+    The basic Character class. Each Character has a string for their name (name), 10 basic characteristics
     including Weapon Skill (Stat_WS), Ballistic skill (Stat_BS), Strength(Stat_Strength),
     Toughness(Stat_Toughness), Agility(Stat_Agility),Intelligence(Stat_Int),
     Perception(Stat_Perc), Fellowship(Stat_Fell), fatigue, and wounds. the 'Stats' are copied into the
@@ -75,10 +77,10 @@ class character(object):
    #     stat = int(random.randint(1,20+raceBonus)
    #     return stat
 
-    def AutoMaker(self, type):
+    def AutoMaker(self, character_type):
         """AutoMaker method
-        Automatic constructor. It just automatically builds a character object when called."""
-        if type == "Human":
+        Automatic constructor. It just automatically builds a Character object when called."""
+        if character_type == "Human":
             race = 'human'
             raceBonus = 25
         else:
@@ -107,8 +109,8 @@ class character(object):
         else:
             Fname = random.choice(HumanFemaleNames)
         Lname = random.choice(HumanLastNames)
-#returns a character Object with the values generated and selected.
-        return character(race, gender, Fname, Lname, Stat_WS, Stat_BS, Stat_Strength, Stat_Tough, Stat_Agility, Stat_Int, Stat_Perc, Stat_WP, Stat_Fell, wounds)
+#returns a Character Object with the values generated and selected.
+        return Character(race, gender, Fname, Lname, Stat_WS, Stat_BS, Stat_Strength, Stat_Tough, Stat_Agility, Stat_Int, Stat_Perc, Stat_WP, Stat_Fell, wounds)
 
     def character_sheet(self):
         """Character sheet Generation function. Outputs a charactersheet with the characteristics."""
@@ -124,7 +126,7 @@ class character(object):
         print(pageBreak)
 
 #        print(spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS)+spacer+str(self.Stat_WS))
-class RogueTrader(character):
+class RogueTrader(Character):
     race = 'human'
     raceBonus = random.randint(20,28)
     def character_sheet(self):
@@ -137,8 +139,8 @@ class skill(object):
         """skill object. Not finished obviously.
 
     But the idea is to have a skill object with a name that would be a string(name), what characteristic
-    from the character that skill tests on(char), an integer value of 0, 1, 2, or 3 to show the
-    level of training if any a character has in that skill (rank), and a multi-line string for the
+    from the Character that skill tests on(char), an integer value of 0, 1, 2, or 3 to show the
+    level of training if any a Character has in that skill (rank), and a multi-line string for the
     description (descrip)."""
         self._name = name
         self._char = char
@@ -152,7 +154,7 @@ class skill(object):
         pass
     def SkillTest(self):
         pass
-    """SkillTest is used when a character needs to perform a test against a skill.
+    """SkillTest is used when a Character needs to perform a test against a skill.
 
     Um... nothing much more then that right now. In the game, you first determine if the skill
     is an advanced skill or not. If it is, you then see if you have training in that skill.
@@ -164,7 +166,7 @@ class skill(object):
     
 class weapon(object):
     #just adding something to test git functionality
-    """weapon class. Any sort of weapon used by a character.
+    """weapon class. Any sort of weapon used by a Character.
 
     name: the name of the weapon. A string
     descript: the description of the weapon. A multi-line string.
@@ -178,7 +180,7 @@ class weapon(object):
     special: a string denoting if the weapon has any sort of special quality to it.
     weight: an integer that represents how much the weapon weighs.
     requisition: cost of purchasing the weapon from the armory. an integer.
-    renown: a string denoting the renown level a character must have to purchase a weapon from the armory. """
+    renown: a string denoting the renown level a Character must have to purchase a weapon from the armory. """
     def __init__ (self, name, descript, weaponClass, weaponRange, RoF, Damage, Pen, clip, reload, special, weight, requisition, renown ):
         self._name = name
         self._descript = descript
