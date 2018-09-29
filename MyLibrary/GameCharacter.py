@@ -25,42 +25,6 @@ class GameCharacter:
         self.first_name = first_name
         self.last_name = last_name
 
-        # Removed in favor of a function getFullName()
-        #self.full_name = firstname + " " + lastname
-
-        # When using a CharacterStats class, we can set 0 as the default value for its properties,
-        # and this becomes unneeded.
-
-        #self.char_stats = {'Weapon Skill': 0, 'Ballistic Skill': 0, 'Strength': 0, 'Toughness': 0, 'Agility': 0,
-        #                   'Intelligence': 0, 'Perception': 0, 'Will Power': 0, 'Fellowship': 0, }
-
-        #Not really sure why you are creating labels for labels. This is really repetative.
-        # self.stats_weapon_skill = stats_weapon_skill
-        # self.stats_ballistic_skill = stats_ballistic_skill
-        # self.stat_strength = stat_strength
-        # self.stat_tough = stat_tough
-        # self.stat_agility = stat_agility
-        # self.stat_int = stat_int
-        # self.stat_perc = stat_perc
-        # self.stat_will_power = stat_will_power
-        # self.stat_fellowship = stat_fellowship
-
-        # Controlled by ThisCharacterStats
-        # self.char_stats['Weapon Skill'] = int(stats_weapon_skill)
-        # self.char_stats['Ballistic Skill'] = int(self.stats_ballistic_skill)
-        # self.char_stats['Strength'] = int(self.stat_strength)
-        # self.char_stats['Toughness'] = int(self.stat_tough)
-        # self.char_stats['Agility'] = int(self.stat_agility)
-        # self.char_stats['Intelligence'] = int(self.stat_int)
-        # self.char_stats['Perception'] = int(self.stat_perc)
-        # self.char_stats['Will Power'] = int(self.stat_will_power)
-        # self.char_stats['Fellowship'] = int(self.stat_fellowship)
-
-        #Should be set as a default value in the property delcaration
-        #self.fatigue = 0
-
-        #Remarked out because I don't know what it is.
-        #self.wounds = wounds
 
     def getFullName(self):
         return self.first_name + " " + self.last_name

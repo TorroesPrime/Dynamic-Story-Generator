@@ -1,14 +1,16 @@
+import random
+
 class CharacterStats:
 
-    weapon_skill = None
-    ballistic_skill = None
-    strength = None
-    toughness = None
-    agility = None
-    intelligence = None
-    perception = None
-    will_power = None
-    fellowship = None
+    weapon_skill = 0
+    ballistic_skill = 0
+    strength = 0
+    toughness = 0
+    agility = 0
+    intelligence = 0
+    perception = 0
+    will_power = 0
+    fellowship = 0
     race_bonus = 0
 
     def __init__(self):
