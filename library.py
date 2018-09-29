@@ -7,7 +7,7 @@ divider = "-"*78
 pageBreak = '\n'*3
 div_char = "-"*32+"Characteristics"+"-"*31
 spacer = '      '
-"""builds the library of lists used in character creation. The material is read in from library.xlsx and fed into a series of lists."""
+"""builds the library of lists used in Character creation. The material is read in from library.xlsx and fed into a series of lists."""
 homeworld = ['Death World','Void Born','Forge World','Hive World','Imperial World','Noble Born']
 #birthright_1 = ['Scavenger','Scapegrace']
 #birthright_2 = ['Scavenger','Scapegrace','Stubjack']

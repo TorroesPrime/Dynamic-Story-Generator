@@ -1,9 +1,8 @@
 #working on changing names to conform to PEP8 standars. 9/26/2018 9:06am -MGC
-import xlrd
-from library import skills
-#from ObjectsandClassesLibrary import CharacterSkill, CharacterSkillGroup
-#from ObjectsandClassesLibrary import *
-import ObjectsandClassesLibrary
+from ObjectsandClassesLibrary import *
+from MyLibrary.CharacterSkill import CharacterSkill
+from MyLibrary.CharacterSkillGroup import CharacterSkillGroup
+
 workbook = xlrd.open_workbook("library.xlsx")
 skillsWorksheet = workbook.sheet_by_name("skills")
 test = False

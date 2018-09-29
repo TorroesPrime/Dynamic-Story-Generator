@@ -1,7 +1,9 @@
-#from ObjectsandClassesLibrary import character
+#from ObjectsandClassesLibrary import Character
 #from ObjectsandClassesLibrary import *
 import ObjectsandClassesLibrary
-#from ObjectsandClassesLibrary import character, RogueTrader
+#from ObjectsandClassesLibrary import Character, RogueTrader
+from MyLibrary.GameCharacter import GameCharacter
+
 count = 1
 Genhuman = []
 RT_human = []
@@ -20,7 +22,7 @@ for i in range (0,4):
 print(str(count)+" characters Generated")
 count = 1
 for chars in Genhuman:
-    print('Generic character')
+    print('Generic Character')
     print("Entry=========="+str(count))
     chars.character_sheet()
     count += 1
