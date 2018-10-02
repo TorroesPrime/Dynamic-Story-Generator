@@ -36,7 +36,11 @@ class GameCharacter:
     def AutoMaker(self, character_type):
 
         """AutoMaker method.
-        Automatic constructor. It just automatically builds a Character object when called."""
+        Automatic constructor. It just automatically builds a Character object with 
+        randomized material when called. the idea behind this function is when the 
+        program calls for a collection of characters to be used that are not user 
+        generated, it can generate them. So like if the player characters enter 
+        a room with 50 people, the program can generate 50 characters."""
         if character_type == "Human":
             race = 'human'
             race_bonus = 25
