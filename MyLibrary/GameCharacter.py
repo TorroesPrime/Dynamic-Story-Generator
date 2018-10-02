@@ -2,6 +2,10 @@ import random
 
 
 class GameCharacter:
+    stats = None
+    race = None
+    fatigue = 0
+
     """
     GameCharacter class.
 
@@ -12,36 +16,18 @@ class GameCharacter:
     char_stats dictionary to make it easier to run through all the stats when making a stat check or test.
     """
 
-    def __init__(self, race, gender, firstname, lastname, stats_weapon_skill, stats_ballistic_skill, stat_strength,
-                 stat_tough, stat_agility, stat_int, stat_perc, stat_will_power, stat_fellowship, wounds):
+    def __init__(self, first_name, last_name, gender, race, stats):
+
+        self.stats = stats
         self.race = race
-        self.race_bonus = 0
+
         self.gender = gender
-        self.first_name = firstname
-        self.last_name = lastname
-        self.full_name = firstname + " " + lastname
-        self.char_stats = {'Weapon Skill': 0, 'Ballistic Skill': 0, 'Strength': 0, 'Toughness': 0, 'Agility': 0,
-                           'Intelligence': 0, 'Perception': 0, 'Will Power': 0, 'Fellowship': 0, }
-        self.stats_weapon_skill = stats_weapon_skill
-        self.stats_ballistic_skill = stats_ballistic_skill
-        self.stat_strength = stat_strength
-        self.stat_tough = stat_tough
-        self.stat_agility = stat_agility
-        self.stat_int = stat_int
-        self.stat_perc = stat_perc
-        self.stat_will_power = stat_will_power
-        self.stat_fellowship = stat_fellowship
-        self.char_stats['Weapon Skill'] = int(stats_weapon_skill)
-        self.char_stats['Ballistic Skill'] = int(self.stats_ballistic_skill)
-        self.char_stats['Strength'] = int(self.stat_strength)
-        self.char_stats['Toughness'] = int(self.stat_tough)
-        self.char_stats['Agility'] = int(self.stat_agility)
-        self.char_stats['Intelligence'] = int(self.stat_int)
-        self.char_stats['Perception'] = int(self.stat_perc)
-        self.char_stats['Will Power'] = int(self.stat_will_power)
-        self.char_stats['Fellowship'] = int(self.stat_fellowship)
-        self.fatigue = 0
-        self.wounds = wounds
+        self.first_name = first_name
+        self.last_name = last_name
+
+
+    def getFullName(self):
+        return self.first_name + " " + self.last_name
 
     # def StatBuilder(race_bonus):
     #     stat = int(random.randint(1,20+racebonus)

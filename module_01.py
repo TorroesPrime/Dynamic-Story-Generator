@@ -10,7 +10,7 @@ RT_human = []
 NPC1 = character.AutoMaker("Human")
 NPC2 = character.AutoMaker("Human")
 NPC3 = character.AutoMaker("Human")
-for i in range (0,4):
+for i in range(0, 4):
     A = 'Human'
     genNPC = character.AutoMaker(A)
     Genhuman.append(genNPC)
