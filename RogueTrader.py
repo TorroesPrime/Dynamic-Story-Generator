@@ -1,4 +1,4 @@
-from GameCharacter import GameCharacter
+from MyLibrary.GameCharacter import GameCharacter
 import random
 
 class RogueTrader(GameCharacter):

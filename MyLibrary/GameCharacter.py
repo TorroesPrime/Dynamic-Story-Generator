@@ -1,4 +1,5 @@
 import random
+from DataLibrary import divider,pageBreak,div_char,spacer
 
 
 class GameCharacter:
@@ -24,6 +25,7 @@ class GameCharacter:
         self.gender = gender
         self.first_name = first_name
         self.last_name = last_name
+        self.full_name = self.first_name + " " + self.last_name
 
 
     def getFullName(self):
@@ -33,57 +35,58 @@ class GameCharacter:
     #     stat = int(random.randint(1,20+racebonus)
     #     return stat
 
-    def AutoMaker(self, character_type):
-
-        """AutoMaker method.
-        Automatic constructor. It just automatically builds a Character object with 
-        randomized material when called. the idea behind this function is when the 
-        program calls for a collection of characters to be used that are not user 
-        generated, it can generate them. So like if the player characters enter 
-        a room with 50 people, the program can generate 50 characters."""
-        if character_type == "Human":
-            race = 'human'
-            race_bonus = 25
-        else:
-            race = 'human'
-            race_bonus = 20
-        # print(race_bonus)
-        # print(race)
-        coinflip = random.randint(1, 2)
-        if coinflip == 1:
-            gender = 'Male'
-        else:
-            gender = 'Female'
-        stats_weapon_skill = int(random.randint(1, 20) + race_bonus)
-        stats_ballistic_skill = int(random.randint(1, 20) + race_bonus)
-        stat_strength = int(random.randint(1, 20) + race_bonus)
-        stat_tough = int(random.randint(1, 20) + race_bonus)
-        stat_agility = int(random.randint(1, 20) + race_bonus)
-        stat_int = int(random.randint(1, 20) + race_bonus)
-        stat_perc = int(random.randint(1, 20) + race_bonus)
-        stat_will_power = int(random.randint(1, 20) + race_bonus)
-        stat_fellowship = int(random.randint(1, 20) + race_bonus)
-        wounds = random.randint(1, 10) + 18
-        fatigue = 0
-        if gender == 'Male':
-            firstname = random.choice(HumanMaleNames)
-        else:
-            firstname = random.choice(HumanFemaleNames)
-        lastname = random.choice(HumanLastNames)
+    #def AutoMaker(self, character_type):
+#
+#        """AutoMaker method.
+#       Automatic constructor. It just automatically builds a Character object with
+#       randomized material when called. the idea behind this function is when the
+#       program calls for a collection of characters to be used that are not user
+#       generated, it can generate them. So like if the player characters enter
+#       a room with 50 people, the program can generate 50 characters."""
+#        if character_type == "Human":
+#           race = 'human'
+#            race_bonus = 25
+#        else:
+#            race = 'human'
+#            race_bonus = 20
+#        print(race_bonus)
+#        print(race)
+#        coinflip = random.randint(1, 2)
+#        if coinflip == 1:
+#            gender = 'Male'
+#        else:
+#            gender = 'Female'
+#        stats_weapon_skill = int(random.randint(1, 20) + race_bonus)
+#        stats_ballistic_skill = int(random.randint(1, 20) + race_bonus)
+#        stat_strength = int(random.randint(1, 20) + race_bonus)
+#        stat_tough = int(random.randint(1, 20) + race_bonus)
+#       stat_agility = int(random.randint(1, 20) + race_bonus)
+#        stat_int = int(random.randint(1, 20) + race_bonus)
+#        stat_perc = int(random.randint(1, 20) + race_bonus)
+#        stat_will_power = int(random.randint(1, 20) + race_bonus)
+#        stat_fellowship = int(random.randint(1, 20) + race_bonus)
+#       wounds = random.randint(1, 10) + 18
+#        fatigue = 0
+#        if gender == 'Male':
+#            firstname = random.choice(HumanMaleNames)
+#        else:
+#            firstname = random.choice(HumanFemaleNames)
+#        lastname = random.choice(HumanLastNames)
         # returns a Character Object with the values generated and selected.
-        return GameCharacter(race, gender, firstname, lastname, stats_weapon_skill, stats_ballistic_skill, stat_strength,
-                             stat_tough, stat_agility, stat_int, stat_perc, stat_will_power, stat_fellowship, wounds)
-
+#        return GameCharacter(race, gender, firstname, lastname, stats_weapon_skill, stats_ballistic_skill, stat_strength,
+#                             stat_tough, stat_agility, stat_int, stat_perc, stat_will_power, stat_fellowship, wounds)
+#
     def character_sheet(self):
         """Character sheet Generation function. Outputs a charactersheet with the characteristics."""
         print(divider)
         print(
-            "Character Name: " + self.full_name + "    Character Race: " + self.race + "     Gender: " + self.gender)
-        print("Character Wounds: " + str(self.wounds) + "         Character Fatigue: " + str(self.fatigue))
+            #"Character Name: " + self.full_name + "    Character Race: " + self.race + "     Gender: " + self.gender)
+            "Character Name: " + self.full_name +"     Gender: " + self.gender)
+        #print("Character Wounds: " + str(self.wounds) + "         Character Fatigue: " + str(self.fatigue))
         print(divider)
         print(div_char)
         print(" WS:{WS}  BS:{BS}    S:{S}    T:{T}   Ag:{Ag}   Int:{Int}  Per:{Per}   WP:{WP}   Fel:{Fel}      ".format(
-            WS=self.stats_weapon_skill, BS=self.stats_ballistic_skill, S=self.stat_strength, T=self.stat_tough,
+            WS=self.weapon_skill, BS=self.stats_ballistic_skill, S=self.stat_strength, T=self.stat_tough,
             Ag=self.stat_agility, Int=self.stat_int, Per=self.stat_perc, WP=self.stat_will_power,
             Fel=self.stat_fellowship))
         print(divider)

@@ -1,6 +1,5 @@
 import random
 
-
 class CharacterStats:
 
     weapon_skill = 0
@@ -16,7 +15,6 @@ class CharacterStats:
 
     def __init__(self):
         pass
-        #print('initialized')
 
     def getRandomStatvalue(self):
         return int(random.randint(1, 20) + self.race_bonus)

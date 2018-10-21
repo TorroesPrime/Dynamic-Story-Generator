@@ -1,4 +1,4 @@
-from CharacterRace import CharacterRace
+from MyLibrary.CharacterRace import CharacterRace
 
 
 class HumanCharacter(CharacterRace):
