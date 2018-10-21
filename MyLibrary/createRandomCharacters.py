@@ -19,6 +19,7 @@ def createRandomCharacter(characterType):
     gender = getRandomGender()
     firstName = getRandomFirstName()
     lastName = getRandomLastName()
+
     return GameCharacter(firstName, lastName, gender, characterType, random_stats)
 
 
